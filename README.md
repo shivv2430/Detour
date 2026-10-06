@@ -2,49 +2,28 @@
 
 An AI that helps you spend less time with AI.
 
+**[🚀 Play with the Live Demo Here](https://shivv2430.github.io/Detour/)**
+
 ## The Problem
 We have AI assistants that can answer almost anything, generate code, write emails, and summarize entire books in seconds. But in doing so, they also give us another reason to stay glued to our screens. They optimize our digital lives, but often at the expense of our physical ones.
 
 ## The Idea
-Detour is an AI agent that flips the script. It has a short conversation with you, understands how much free time you have and what you feel like doing, and then suggests a real-world activity. 
+Detour is a web application that flips the script. Instead of infinite scrolling, it guides you through a quick 3-step questionnaire to understand how much free time you have, your current mood, and the vibe you want (Nature, Self, Company, etc.). Based on your answers, it generates a personalized real-world mission—like creative writing, walking in nature, cooking, or calling a friend.
 
 And then: **It gets out of your way.** 
 
-The best thing this AI can do is know when to stop talking. You tell it you're free, and it sends you outside. No endless scrolling, no 20-message deep dives. Just a thoughtful suggestion and a blank screen waiting for your return.
-
-## Why Open AI?
-This project uses open-weight AI models (like Llama 3 or Mistral) rather than closed ecosystems. This is genuinely important to the project for a few reasons:
-- **Model Flexibility & Privacy:** You can run it on your own server or locally via Ollama. What you do with your free time is your business.
-- **Avoiding Dependence:** We shouldn't rely on a single closed AI provider for something as fundamental as "how to spend time in the real world."
-- **Customization:** Open models allow you to modify the agent's behavior—making it more poetic, more direct, or tailored to your specific environment (e.g., tweaking it for a garden planner or a hiking buddy).
+The best thing this app can do is know when to stop interacting. You finish the questionnaire, it gives you a task, and sends you outside. No endless scrolling, no deep dives. Just a thoughtful suggestion and a blank screen waiting for your return.
 
 ## Features
-- **Conversational Engine:** Natural, human-like chat that figures out your context without boring forms.
-- **Detour Mode:** Once a mission is generated, the UI fades away to a peaceful screen, encouraging you to put your phone down.
+- **Vibe Check:** A 3-step animated questionnaire that figures out exactly what you should do based on your mood (Good, Mid, Not well, Worst).
+- **Personalized Advice:** Provides unique activities like photography, video making, writing, deep self care, gyming, dancing, or home cleaning.
+- **Detour Mode:** Once a mission is generated, the UI fades away to a peaceful "You're good" screen, encouraging you to put your phone down and go do the activity.
 - **Return Reflection:** A minimal feedback loop when you return to log what you noticed.
-- **Surprise Mode:** For when you just want the AI to tell you what to do.
 
 ## Tech Stack
-- **Frontend:** React, Vite, Tailwind CSS, Framer Motion
-- **Backend:** Node.js, Express
-- **AI Integration:** Open-weight model API via simple service layer (currently mocked for easy local setup, swap with your Groq/HuggingFace key in `.env`).
-
-## Getting Started
-
-### 1. Backend Setup
-```bash
-cd backend
-npm install
-# Rename .env.example to .env and add your AI API key
-node server.js
-```
-
-### 2. Frontend Setup
-```bash
-cd frontend
-npm install
-npm run dev
-```
+- **Frontend:** React, Vite, Tailwind CSS (v4), Framer Motion
+- **Design:** Modern glassmorphism, responsive UI, rich color palette.
+- **Deployment:** GitHub Pages
 
 ## Built for Hacktoberfest 🌱
-This project was built for the Hacktoberfest "Touch Grass" challenge, focusing on building something with open-source AI that gets people off the screen and into the world.
+This project was built for the Hacktoberfest "Touch Grass" challenge, focusing on building something that gets people off the screen and into the real world.
