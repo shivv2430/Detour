@@ -1,0 +1,42 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: "Instrument Serif", serif;
+  --font-sans: "DM Sans", sans-serif;
+  --color-grass: #bbf7d0;
+  --color-earth: #f8fafc;
+  --color-forest: #064e3b;
+  --color-accent: #22c55e;
+}
+
+@layer base {
+  body {
+    @apply bg-earth text-forest font-sans m-0 overflow-x-hidden selection:bg-grass selection:text-forest;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-serif font-normal;
+  }
+}
+
+@keyframes drift {
+  0% { transform: translateY(0px) translateX(0px); }
+  33% { transform: translateY(-5px) translateX(3px); }
+  66% { transform: translateY(2px) translateX(-2px); }
+  100% { transform: translateY(0px) translateX(0px); }
+}
+
+.animate-drift {
+  animation: drift 8s ease-in-out infinite;
+}
+
+.text-marquee {
+  display: flex;
+  white-space: nowrap;
+  animation: marquee 30s linear infinite;
+}
+
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
